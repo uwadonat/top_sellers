@@ -1,0 +1,15 @@
+li {
+    list-style-type: none;
+}
+
+.seller-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.seller-info {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(105, 102, 102);
+}
