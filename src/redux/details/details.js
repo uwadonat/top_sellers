@@ -18,21 +18,37 @@ export const addData = (payload) => ({
     payload,
 });
 
-export const loadData = (symbol = 'Facebook') => (dispatch) => {
-    fetch(`https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=857a73104acc587cd3aba99c381d99c9`)
-      .then((presponse) => presponse.json())
-      .then((profile) => {
-        fetch(`https://financialmodelingprep.com/api/v3/historical-chart/1hour/${symbol}?apikey=857a73104acc587cd3aba99c381d99c9`)
-          .then((cresponse) => cresponse.json())
-          .then((chart) => {
-            const detailsData = {
-              profileData: profile[0],
-              chartData: chart,
-            };
-            dispatch(addData(detailsData));
-          });
-      });
-  };
+// export const loadData = (symbol) => { 
+//     fetch(`https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=433fe75a22056f72b4e335b0627761a8 `)
+//       .then((presponse) => presponse.json())
+//       .then((profile) => {
+//         fetch(`https://financialmodelingprep.com/api/v3/historical-chart/1hour/${symbol}?apikey=433fe75a22056f72b4e335b0627761a8`)
+//           .then((cresponse) => cresponse.json())
+//           .then((chart) => {
+//             const detailsData = {
+//               profileData: profile[0],
+//               chartData: chart,
+//             };
+          
+//           })
+//           .then((data) => data);
+//       });
+//   };
+
+export const loadData = async (symbol) => {
+  let response1 = []
+  let response2 = []
+
+  const endpointProfile =await fetch(`https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=433fe75a22056f72b4e335b0627761a8`); 
+  response1 = await endpointProfile.json();
+  
+  const endpointChart = await fetch(`https://financialmodelingprep.com/api/v3/historical-chart/1hour/${symbol}?apikey=433fe75a22056f72b4e335b0627761a8`);
+  response2 = await endpointChart.json();
+
+  const data = { response1, response2: response2.slice(0, 10) };
+  return data;
+
+} 
   
   export default detailsReducer;
   

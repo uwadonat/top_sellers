@@ -3,7 +3,7 @@ const FETCH_SELLERS = 'top_sellers/home/FETCH_SELLERS';
 const initialState = [];
 
 export const fetchSellers = () => async (dispatch) => {
-  const fetched = await fetch('https://financialmodelingprep.com/api/v3/stock/list?apikey=857a73104acc587cd3aba99c381d99c9');
+  const fetched = await fetch('https://financialmodelingprep.com/api/v3/stock/list?apikey=433fe75a22056f72b4e335b0627761a8 ');
   const list = await fetched.json();
   const sellers = [];
   list.map((seller) => sellers.push({

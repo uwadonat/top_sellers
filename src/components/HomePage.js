@@ -14,11 +14,13 @@ const HomePage = () => {
   }, []);
   return (
     <div>
+      
       <ul className="seller-container">
         {sellers.map((seller) => (
           <Seller key={seller.symbol} seller={seller} />
         ))}
       </ul>
+     
     </div>
   );
 };

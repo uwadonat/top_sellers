@@ -12,12 +12,8 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/Homepage">
-            <HomePage />
-          </Route>
-          <Route path='/DetailsPage'>
-            <DetailsPage />
-          </Route>
+          <Route exact path="/" component={HomePage} />
+          <Route path='/DetailsPage/:id' component={DetailsPage} />
         </Switch>
       </Router>
     </Provider>
