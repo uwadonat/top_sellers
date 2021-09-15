@@ -11,11 +11,15 @@ const Seller = ({ seller }) => {
   const dispatch = useDispatch();
   return (
     <li key={seller.symbol} className="seller-info col-sm-6 col-lg-3" >
-      <div>
+      <div className="seller-card">
+        <div>
         <Link to={`/DetailsPage/${seller.id}`} ><ArrowForwardIcon className="arrow-forward"/></Link>
+        </div >
+        <div className="seller-main-info">
         <h2 className="seller-name">{seller.name}</h2>
         <p className="sellet-price">{seller.price}</p>
         <p className="seller-exchange">{seller.exchange}</p>
+        </div>
       </div>
     </li>
   );
