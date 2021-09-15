@@ -1,13 +1,19 @@
 import { NavLink } from 'react-router-dom';
-
+import MicIcon from '@material-ui/icons/Mic';
+import SettingsIcon from '@material-ui/icons/Settings';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import './Header.css';
 function Header() {
     return (
-        <div>
-          <nav>
-              <NavLink to="/HomePage">Home</NavLink>
-              <NavLink to="/DetailsPage">DetailsPage</NavLink>
-          </nav>
-        </div>
+       
+        <header>
+            <div><ArrowBackIosIcon /></div>
+            <div>TOP SELLERS</div>
+            <div>
+                <MicIcon className="Heade-icons"/>
+                <SettingsIcon className="Heade-icons"/>
+            </div>
+        </header>
         
 
     )

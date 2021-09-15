@@ -4,6 +4,7 @@ import HomePage from './components/HomePage';
 import Header from './components/Header';
 import DetailsPage from './components/DetailsPage';
 import store from './redux/configStore';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {

@@ -1,0 +1,10 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem  1rem;
+    background-color: cadetblue;
+}
+
+.Heade-icons {
+   margin-left: 2rem; 
+}

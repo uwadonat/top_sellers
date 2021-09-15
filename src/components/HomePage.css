@@ -1,15 +1,17 @@
+* {
+    margin:0;
+}
+
 li {
     list-style-type: none;
 }
 
 .seller-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    background-color: rgb(199, 205, 216);
 }
 
 .seller-info {
-    width: 200px;
+    
     height: 200px;
-    background-color: rgb(105, 102, 102);
+   
 }
