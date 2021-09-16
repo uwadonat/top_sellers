@@ -6,12 +6,9 @@ import './DetailsPage.css';
 
 const DetailsPage = () => {
   const detailsReducer = useSelector((state) => state.detailsReducer);
-
-  // dispatch(addData(detailsData));
-
   const { id } = useParams();
   const dispatch = useDispatch();
-  // const [temp, setTemp] = useState(null);
+
   useEffect(() => {
     loadData(id).then((data) => {
       dispatch(addData(data));
@@ -19,10 +16,6 @@ const DetailsPage = () => {
   }, []);
 
   const { response1 } = detailsReducer;
-
-  // const { response2 } = detailsReducer;
-
-  // console.log(response2);
 
   return (
     <div className="details-container">
@@ -64,14 +57,6 @@ const DetailsPage = () => {
           </tbody>
         </table>
       </div>
-      {/* <div>
-        {response2
-          && response2.map((res) => {
-            <div key={res.date}>
-              <p>{res.date}</p>
-            </div>;
-          })}
-      </div> */}
     </div>
   );
 };

@@ -6,13 +6,13 @@ import './Header.css';
 
 function Header() {
   return (
-    <header>
+    <header className="head">
       <div>
         <Link to="/">
           <ArrowBackIosIcon className="back" />
         </Link>
       </div>
-      <div>TOP SELLERS</div>
+      <div className="header-title">TOP SELLERS</div>
       <div>
         <MicIcon className="Heade-icons" />
         <SettingsIcon className="Heade-icons" />

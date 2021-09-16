@@ -13,10 +13,26 @@ const HomePage = () => {
     }
   }, []);
   return (
-    <div className="seller-container row">
-      {sellers.map((seller) => (
-        <Seller key={seller.symbol} seller={seller} />
-      ))}
+    <div>
+      <div className="row homepage-logo">
+        <div className="col-6">
+          <img
+            className="homepage-logo-img"
+            src="/images/seller.jpeg"
+            alt="logo"
+          />
+        </div>
+        <div className="col-6 homepage-logo-text">
+          <h2>Visit Big sellers online</h2>
+          <p className="top">Top 100</p>
+        </div>
+      </div>
+      <div className="row home-sub-title">START BY SELLER</div>
+      <div className="seller-container row">
+        {sellers.map((seller) => (
+          <Seller key={seller.symbol} seller={seller} />
+        ))}
+      </div>
     </div>
   );
 };

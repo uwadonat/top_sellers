@@ -4,12 +4,14 @@
 }
 
 .seller-name {
-  font-size: medium;
+  font-size: large;
+  font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .seller-price,
 .seller-exchange {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .arrow-forward {
@@ -28,7 +30,7 @@
   text-align: right;
   padding-right: 10px;
   padding-top: 10px;
-  border-radius: 10px;
+  color: white;
   border: 1px solid gray;
 }
 
@@ -38,9 +40,9 @@
 }
 
 .seller-card:nth-child(odd) {
-  background-color: rgb(190, 50, 72);
+  background-color: #db4681;
 }
 
 .seller-card:nth-child(even) {
-  background-color: rgb(192, 61, 87);
+  background-color: #d1447a;
 }

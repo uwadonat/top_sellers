@@ -2,12 +2,21 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1rem 1rem;
-  background-color: cadetblue;
-  width: 100%;
+  margin-right: -12px;
+  color: white;
+  background-color: #db4681;
+}
+
+.header-title {
+  opacity: 0.5;
 }
 
 .Heade-icons {
   margin-left: 2rem;
+}
+
+.back {
+  color: white;
 }
 
 .back:hover {
