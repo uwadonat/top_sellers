@@ -14,7 +14,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path='/DetailsPage/:id' component={DetailsPage} />
+          <Route path="/DetailsPage/:id" component={DetailsPage} />
         </Switch>
       </Router>
     </Provider>

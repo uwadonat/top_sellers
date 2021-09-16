@@ -1,5 +1,5 @@
 const ADD_DATA = 'top-sellers/details/ADD_DATA';
-const DISPLAY_DATA = 'top-sellers/details/DISPLAY_DATA';
+// const DISPLAY_DATA = 'top-sellers/details/DISPLAY_DATA';
 
 const defaultState = {};
 
@@ -22,12 +22,12 @@ export const loadData = async (symbol) => {
   let response2 = [];
 
   const endpointProfile = await fetch(
-    `https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=433fe75a22056f72b4e335b0627761a8`
+    `https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=433fe75a22056f72b4e335b0627761a8`,
   );
   response1 = await endpointProfile.json();
 
   const endpointChart = await fetch(
-    `https://financialmodelingprep.com/api/v3/historical-chart/1hour/${symbol}?apikey=433fe75a22056f72b4e335b0627761a8`
+    `https://financialmodelingprep.com/api/v3/historical-chart/1hour/${symbol}?apikey=433fe75a22056f72b4e335b0627761a8`,
   );
   response2 = await endpointChart.json();
 

@@ -1,18 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { loadData } from '../redux/details/details';
 import { useParams } from 'react-router-dom';
-import { addData } from '../redux/details/details';
+import { loadData, addData } from '../redux/details/details';
 import './DetailsPage.css';
 
-const DetailsPage = ({ symbol }) => {
+const DetailsPage = () => {
   const detailsReducer = useSelector((state) => state.detailsReducer);
 
   // dispatch(addData(detailsData));
 
   const { id } = useParams();
   const dispatch = useDispatch();
-  const [temp, setTemp] = useState(null);
+  // const [temp, setTemp] = useState(null);
   useEffect(() => {
     loadData(id).then((data) => {
       dispatch(addData(data));
@@ -21,7 +20,7 @@ const DetailsPage = ({ symbol }) => {
 
   const { response1 } = detailsReducer;
 
-  const { response2 } = detailsReducer;
+  // const { response2 } = detailsReducer;
 
   // console.log(response2);
 
@@ -29,12 +28,14 @@ const DetailsPage = ({ symbol }) => {
     <div className="details-container">
       <div>
         <h2 className="details-title text-center">
-          Learn more about{" "}
+          Learn more about
+          {' '}
           <span className="seller-name text-info">
-            {response1 && response1[0].companyName}{" "}
+            {response1 && response1[0].companyName}
+            {' '}
           </span>
         </h2>
-        <table class="table table-dark table-striped">
+        <table className="table table-dark table-striped">
           <tbody>
             <tr>
               <th scope="row">Company Name:</th>
@@ -63,14 +64,14 @@ const DetailsPage = ({ symbol }) => {
           </tbody>
         </table>
       </div>
-      <div>
-        {response2 &&
-          response2.map((res) => {
+      {/* <div>
+        {response2
+          && response2.map((res) => {
             <div key={res.date}>
               <p>{res.date}</p>
             </div>;
           })}
-      </div>
+      </div> */}
     </div>
   );
 };
