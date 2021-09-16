@@ -10,18 +10,18 @@ import "./Seller.css";
 const Seller = ({ seller }) => {
   const dispatch = useDispatch();
   return (
-    <li key={seller.symbol} className="seller-info col-sm-6 col-lg-3" >
-      <div className="seller-card">
+    
+      <div key={seller.symbol} className="seller-card seller-info col-6 col-lg-3">
         <div>
         <Link to={`/DetailsPage/${seller.id}`} ><ArrowForwardIcon className="arrow-forward"/></Link>
         </div >
         <div className="seller-main-info">
-        <h2 className="seller-name">{seller.name}</h2>
-        <p className="sellet-price">{seller.price}</p>
-        <p className="seller-exchange">{seller.exchange}</p>
+        <h2 className="seller-name"><span>Name:</span>{seller.name}</h2>
+        <p className="sellet-price"><span>Price:$</span>{seller.price}</p>
+        <p className="seller-exchange"><span>Exchange:</span>{seller.exchange}</p>
         </div>
       </div>
-    </li>
+ 
   );
 };
 

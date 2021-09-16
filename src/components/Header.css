@@ -3,8 +3,14 @@ header {
     justify-content: space-between;
     padding: 1rem  1rem;
     background-color: cadetblue;
+    width: 100%;
 }
 
 .Heade-icons {
    margin-left: 2rem; 
+}
+
+.back:hover {
+    padding:5px;
+    background-color: rgb(119, 111, 104) ;
 }

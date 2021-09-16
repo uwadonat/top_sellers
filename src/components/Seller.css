@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
 .seller-name {
     font-size: medium;
 }
@@ -13,16 +17,32 @@
     border-radius: 50%;
 }
 
+.seller-info {
+    height: 100%;
+    
+}
+
 .seller-card{
     display: flex;
     flex-direction: column;
     text-align: right;
     padding-right: 10px;;
     padding-top: 10px;
-    background-color: crimson;
+    border-radius: 10px;
+    border: 1px solid gray;
+  
+   
 }
 
 .seller-main-info {
     padding-top: 60px;
     line-height: 3px;
+}
+
+.seller-card:nth-child(odd) {
+    background-color: rgb(190, 50, 72);
+}
+
+.seller-card:nth-child(even) {
+    background-color: rgb(192, 61, 87);
 }

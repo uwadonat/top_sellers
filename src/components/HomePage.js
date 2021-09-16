@@ -15,11 +15,11 @@ const HomePage = () => {
   return (
    
       
-      <ul className="seller-container row">
+      <div className="seller-container row">
         {sellers.map((seller) => (
-          <Seller key={seller.symbol} seller={seller} />
+          <Seller key={seller.symbol} seller={seller}/>
         ))}
-      </ul>
+      </div>
      
    
   );

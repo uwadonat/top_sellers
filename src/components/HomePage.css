@@ -1,17 +1,14 @@
-* {
-    margin:0;
-}
-
-li {
-    list-style-type: none;
-}
 
 .seller-container {
-    background-color: rgb(199, 205, 216);
+    
+    box-sizing: border-box;
 }
 
 .seller-info {
     
     height: 200px;
+    
+    
    
 }
+
