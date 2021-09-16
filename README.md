@@ -1,14 +1,16 @@
 # top_sellers
 This is a React web application that use Financial modeling prep API to retrieve top sellers all over the world and allow users to get details information on each one.
 
+![screenshot](https://github.com/uwadonat/top_sellers/blob/feature1/images/Screenshot.png)
 
+Additional description about the project and its features.
 ## 🔴  Live Demo
 
 [top_sellers](https://inspiring-murdock-090ffa.netlify.app/)
 
 ## Project Overview Video
 
-[Watch Here]()
+[Watch Here](https://www.loom.com/share/c7ce4de1d39441318139323ae81d4896)
 
 ## Built With
 
