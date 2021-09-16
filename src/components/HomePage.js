@@ -13,15 +13,11 @@ const HomePage = () => {
     }
   }, []);
   return (
-   
-      
-      <div className="seller-container row">
-        {sellers.map((seller) => (
-          <Seller key={seller.symbol} seller={seller}/>
-        ))}
-      </div>
-     
-   
+    <div className="seller-container row">
+      {sellers.map((seller) => (
+        <Seller key={seller.symbol} seller={seller} />
+      ))}
+    </div>
   );
 };
 

@@ -8,7 +8,7 @@ function Header() {
     <header>
       <div>
         <Link to="/">
-          <ArrowBackIosIcon className="back"/>
+          <ArrowBackIosIcon className="back" />
         </Link>
       </div>
       <div>TOP SELLERS</div>
